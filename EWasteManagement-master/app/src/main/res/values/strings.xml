@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">E Waste Management</string>
+    <string name="help4care_india"><font color="#FFC025">Help4Care</font> <font color="#35B55F">India</font></string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem natus omnis quia totam, voluptatem?</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_map_detail">MapDetailActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>

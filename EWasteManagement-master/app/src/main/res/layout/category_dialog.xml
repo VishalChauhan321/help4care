@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:layout_margin="25dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Category"
+        android:textColor="@color/green"
+        android:padding="12sp"
+        android:textSize="16dp"
+        android:fontFamily="@font/inter" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:background="@drawable/et_border"
+        android:padding="12sp"
+        android:textColorHint="@color/black"
+        android:drawableRight="@drawable/ic_search"
+        android:hint="Search Category" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/sub_category_item"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:layout_margin="12sp" />
+
+</LinearLayout>

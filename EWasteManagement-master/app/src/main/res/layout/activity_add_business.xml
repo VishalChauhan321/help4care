@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottom_border"
+    tools:context=".AddBusinessActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left"
+                android:padding="10dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/green"
+                android:text="Add Business Details"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Required Information"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@id/text"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/businessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:textSize="15dp"
+                    android:padding="15sp"
+                    android:fontFamily="@font/inter"
+                    android:textColorHint="@color/black"
+                    android:hint="Business Name" />
+
+                <Button
+                    android:id="@+id/category"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter"
+                    android:textSize="15dp"
+                    android:gravity="start"
+                    android:textAllCaps="false"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:padding="15sp" />
+
+                <EditText
+                    android:id="@+id/callingNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/inter"
+                    android:textSize="15dp"
+                    android:padding="15sp"
+                    android:textColorHint="@color/black"
+                    android:inputType="number"
+                    android:hint="Calling Number" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Add An Image"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/uploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:background="@color/white"
+                android:drawableRight="@drawable/ic_baseline_add_a_photo_24"
+                android:fontFamily="@font/inter"
+                android:gravity="start"
+                android:padding="15sp"
+                android:text="Upload Image"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadImage"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter"
+                android:padding="12dp"
+                android:text="Map Location"
+                android:textColor="@color/black" />
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_height="200dp"
+                android:layout_below="@id/text4"  />
+
+
+            <Button
+                android:id="@+id/addBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_below="@id/map"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="25dp"
+                android:text="Add Business"
+                android:fontFamily="@font/inter"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@drawable/dummy_profile"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/profileImage"
+            android:fontFamily="@font/inter"
+            android:text="Moutamid"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profileImage"
+            android:layout_below="@id/name"
+            android:text="@string/lorem"
+            android:lines="1"
+            android:fontFamily="@font/inter"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="22/12/2022"
+            android:fontFamily="@font/inter"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="6dp"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
